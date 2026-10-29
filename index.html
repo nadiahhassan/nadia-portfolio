@@ -1,0 +1,468 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Nadia Hassan Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Caveat:wght@500;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
+<style>
+/* Layout: a photographer's scrapbook pinboard. Polaroids taped at angles, stickers, handwritten notes in the margins. */
+:root {
+  --board: #f3efe6;
+  --ink: #1d1a2b;
+  --soft: #5c566e;
+  --card: #ffffff;
+  --cobalt: #2f4bd9;
+  --tomato: #ff5a3c;
+  --butter: #ffd44d;
+  --pink: #ff9ec7;
+  --mint: #7fdcb6;
+  --tape: rgba(255, 228, 140, 0.78);
+  --shadow: 0 10px 24px rgba(29, 26, 43, 0.16);
+  --display: "Shrikhand", "Cooper Black", Georgia, serif;
+  --hand: "Caveat", "Comic Sans MS", cursive;
+  --body: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --board: #17152a; --ink: #f4f0ff; --soft: #b4adc9; --card: #26233d;
+    --cobalt: #7d8fff; --tomato: #ff7a5f; --butter: #ffd966; --pink: #ff9ec7; --mint: #7fdcb6;
+    --tape: rgba(255, 217, 102, 0.55); --shadow: 0 10px 24px rgba(0, 0, 0, 0.45); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --board: #17152a; --ink: #f4f0ff; --soft: #b4adc9; --card: #26233d;
+  --cobalt: #7d8fff; --tomato: #ff7a5f; --butter: #ffd966; --pink: #ff9ec7; --mint: #7fdcb6;
+  --tape: rgba(255, 217, 102, 0.55); --shadow: 0 10px 24px rgba(0, 0, 0, 0.45); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background-color: var(--board); color: var(--ink);
+  background-image: radial-gradient(color-mix(in srgb, var(--soft) 22%, transparent) 1px, transparent 1.2px);
+  background-size: 22px 22px;
+  font: 400 1.05rem/1.6 var(--body);
+  overflow-x: hidden;
+}
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 4px; border-radius: 6px; }
+.gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.inner { max-width: 70rem; margin: 0 auto; }
+h1, h2 { font-family: var(--display); font-weight: 400; margin: 0; line-height: 1; text-wrap: balance; }
+.hand { font-family: var(--hand); font-weight: 700; }
+
+/* Ticker */
+.ticker { background: var(--ink); color: var(--board); overflow: hidden; white-space: nowrap; padding-block: 0.6rem; }
+.ticker-track { display: inline-flex; gap: 2rem; font: 800 0.9rem/1 var(--body); letter-spacing: 0.08em; text-transform: uppercase; }
+.ticker-track span::after { content: "✺"; margin-left: 2rem; color: var(--butter); }
+
+/* Hero */
+.hero { padding-block: 3rem 4rem; }
+.hero .inner { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; }
+@media (max-width: 820px) { .hero .inner { grid-template-columns: minmax(0, 1fr); } }
+.hello { font-size: 2rem; color: var(--tomato); transform: rotate(-4deg); display: inline-block; }
+.hero h1 { font-size: clamp(3.6rem, 11vw, 7.5rem); color: var(--cobalt); margin-top: 0.2rem; }
+.hero h1 .squig { position: relative; display: inline-block; }
+.hero h1 .squig svg { position: absolute; left: 0; bottom: -0.18em; width: 100%; height: 0.3em; }
+.intro { font-size: clamp(1.15rem, 2.2vw, 1.35rem); max-width: 34ch; margin: 1.4rem 0 1.6rem; }
+.intro mark { background: linear-gradient(transparent 55%, var(--butter) 55%); color: inherit; padding: 0 0.15em; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 0; margin: 0; list-style: none; }
+.chips li { font-weight: 600; font-size: 0.92rem; padding: 0.45rem 0.9rem; border-radius: 999px; border: 2px solid var(--ink); background: var(--card); }
+.chips li:nth-child(1) { background: var(--pink); color: #1d1a2b; transform: rotate(-2deg); }
+.chips li:nth-child(2) { background: var(--mint); color: #1d1a2b; transform: rotate(1.5deg); }
+.chips li:nth-child(3) { background: var(--butter); color: #1d1a2b; transform: rotate(-1deg); }
+
+/* Polaroid stack */
+.stack { position: relative; min-height: 32rem; }
+img.pic { width: 100%; object-fit: cover; }
+.pola img.pic { aspect-ratio: 4 / 5; }
+.stack .p2 { width: min(15rem, 58%); }
+.stack .p3 { width: min(19rem, 64%); }
+.work img.pic { aspect-ratio: 4 / 3; object-position: 50% 45%; }
+.work img.pic.full { aspect-ratio: auto; height: auto; }
+.lens { display: grid; gap: 2.4rem; justify-items: start; }
+.pic.grape { background: radial-gradient(circle at 25% 75%, var(--pink) 0 22%, transparent 23%), linear-gradient(135deg, #7a3cd9, var(--cobalt)); }
+.pic.mint { background: radial-gradient(circle at 75% 70%, var(--butter) 0 20%, transparent 21%), linear-gradient(200deg, var(--mint), #2f9e7a); }
+
+/* About */
+.about { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 3rem; align-items: center; }
+@media (max-width: 820px) { .about { grid-template-columns: minmax(0, 1fr); } }
+.about .grad-pola { position: relative; width: min(22rem, 90%); justify-self: center; transform: rotate(-3deg); margin: 0; }
+.about .grad-pola:hover { transform: rotate(0) scale(1.03); }
+.grad-pola img.pic { aspect-ratio: 3 / 4; object-position: 50% 30%; }
+.grad-pola .badge { top: auto; bottom: 3.6rem; right: -1.4rem; width: 5.4rem; background: var(--pink); }
+.about-text { min-width: 0; }
+.about-text .head { margin-bottom: 1.2rem; }
+.about-text p { margin: 0 0 1rem; max-width: 60ch; font-size: 1.1rem; }
+.about-text strong { background: linear-gradient(transparent 60%, color-mix(in srgb, var(--butter) 70%, transparent) 60%); }
+.nums { list-style: none; padding: 0; margin: 3rem 0 0; display: flex; flex-wrap: wrap; gap: 1rem; }
+.nums li {
+  flex: 1 1 11rem; min-width: 0; display: grid; gap: 0.3rem; padding: 1.1rem 1rem; border-radius: 1.2rem;
+  border: 2.5px solid #1d1a2b; color: #1d1a2b; box-shadow: 4px 4px 0 #1d1a2b;
+}
+.nums li:nth-child(1) { background: var(--butter); transform: rotate(-1.5deg); }
+.nums li:nth-child(2) { background: var(--pink); transform: rotate(1deg); }
+.nums li:nth-child(3) { background: var(--mint); transform: rotate(-0.5deg); }
+.nums li:nth-child(4) { background: #b9c4ff; transform: rotate(1.5deg); }
+.nums li:nth-child(5) { background: #ffb59f; transform: rotate(-1deg); }
+.nums b { font: 400 clamp(2rem, 4vw, 2.6rem)/1 var(--display); font-variant-numeric: tabular-nums; }
+.nums span { font-size: 0.92rem; line-height: 1.4; }
+
+@media (max-width: 480px) { .work .badge { right: -0.2rem; } .grad-pola .badge { right: -0.4rem; } }
+
+/* Video cover */
+.video { position: relative; display: block; color: #fff; text-decoration: none; }
+.video .play {
+  position: absolute; left: 50%; top: 50%; width: 4.2rem; height: 4.2rem; translate: -50% -50%; border-radius: 50%;
+  background: var(--tomato); border: 3px solid #fff; box-shadow: 0 6px 18px rgba(0,0,0,.35); transition: transform .2s;
+}
+.video .play::after { content: ""; position: absolute; left: 54%; top: 50%; translate: -50% -50%; border-style: solid; border-width: 0.75rem 0 0.75rem 1.2rem; border-color: transparent transparent transparent #fff; }
+.video:hover .play { transform: scale(1.12); }
+.video .vlabel { position: absolute; left: 0.6rem; bottom: 0.6rem; background: rgba(29,26,43,.82); padding: 0.35rem 0.6rem; border-radius: 999px; font-size: 0.78rem; font-weight: 800; }
+@media (prefers-reduced-motion: no-preference) {
+  .video .play { animation: pulse 2.2s ease-in-out infinite; }
+  @keyframes pulse { 50% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--tomato) 30%, transparent), 0 6px 18px rgba(0,0,0,.35); } }
+}
+
+/* Badges */
+.badges { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.6rem 0.9rem; }
+.badges li { width: 9.1rem; }
+@media (max-width: 480px) { .badges li { width: calc(50% - 0.5rem); } .merit { padding: 1rem; } .merit b { font-size: 0.95rem; } .merit small { font-size: 0.7rem; } }
+.merit {
+  width: 100%; max-width: 12rem; aspect-ratio: 1; border-radius: 50%; position: relative; color: #1d1a2b;
+  display: grid; place-content: center; text-align: center; gap: 0.25rem; padding: 1.15rem;
+  border: 2.5px solid #1d1a2b; box-shadow: 4px 5px 0 #1d1a2b; transition: transform .25s cubic-bezier(.3,1.4,.5,1);
+}
+.merit::before { content: ""; position: absolute; inset: 7px; border-radius: 50%; border: 2px dashed rgba(29,26,43,.55); pointer-events: none; }
+.merit:hover { transform: rotate(0deg) scale(1.06); }
+.merit b { font: 400 1.02rem/1.05 var(--display); }
+.merit small { font-size: 0.72rem; line-height: 1.3; font-weight: 600; }
+.merit i { font: 700 1.15rem/1 var(--hand); font-style: normal; }
+.badges li:nth-child(1) .merit { background: var(--tomato); transform: rotate(-6deg); }
+.badges li:nth-child(2) .merit { background: var(--mint); transform: rotate(4deg); }
+.badges li:nth-child(3) .merit { background: var(--board); border-style: dashed; box-shadow: none; transform: rotate(-3deg); }
+.badges li:nth-child(3) .merit::before { border-color: transparent; }
+.badges li:nth-child(3) .merit { color: var(--ink); }
+.badges li:nth-child(4) .merit { background: #b9c4ff; transform: rotate(5deg); }
+.badges li:nth-child(5) .merit { background: var(--pink); transform: rotate(-4deg); }
+.badges li:nth-child(6) .merit { background: var(--butter); transform: rotate(3deg); }
+.badges li:nth-child(7) .merit { background: #ffb59f; transform: rotate(-5deg); }
+.soon {
+  position: absolute; top: -0.4rem; right: -0.6rem; background: var(--cobalt); color: #fff; font: 800 0.68rem/1 var(--body);
+  letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 0.55rem; border-radius: 999px; transform: rotate(14deg);
+}
+
+/* Path */
+.path { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem 1.2rem; position: relative; }
+@media (max-width: 820px) { .path { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .path { grid-template-columns: minmax(0, 1fr); } }
+.path li { background: var(--card); padding: 1rem 1.1rem 1.1rem; box-shadow: var(--shadow); display: grid; gap: 0.25rem; min-width: 0; border-top: 6px solid var(--tomato); }
+.path li:nth-child(2n) { border-top-color: var(--cobalt); }
+.path li:nth-child(3n) { border-top-color: var(--mint); }
+.path b { font: 700 1.9rem/1 var(--hand); color: var(--tomato); }
+.path strong { font-size: 1.08rem; font-weight: 800; }
+.path span { color: var(--soft); font-size: 0.95rem; }
+.path .honours { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem; }
+.path .honours em { font-style: normal; font-weight: 800; font-size: 0.8rem; color: #1d1a2b; background: var(--butter); border: 2px solid #1d1a2b; border-radius: 999px; padding: 0.25rem 0.6rem; }
+.path .honours em + em { background: var(--pink); }
+.contact .email { margin: 1.4rem 0 0; font-size: 1.05rem; }
+.contact .email span { font-weight: 800; user-select: all; overflow-wrap: anywhere; }
+
+.lens .lens-pola { position: relative; width: min(20rem, 88%); transform: rotate(3deg); margin: 0 0 0 1rem; }
+.lens-pola img.pic { aspect-ratio: 3 / 4; object-position: 60% 50%; }
+.lens .lens-pola:hover { transform: rotate(0) scale(1.03); }
+.pola {
+  background: var(--card); padding: 0.8rem 0.8rem 0; box-shadow: var(--shadow);
+  width: min(17rem, 72%); position: absolute; transition: transform .35s cubic-bezier(.3,1.4,.5,1);
+}
+.pola .pic { aspect-ratio: 1; max-width: 100%; display: block; }
+.pola figcaption { font: 700 1.5rem/1 var(--hand); padding: 0.7rem 0.2rem 0.9rem; text-align: center; }
+.pola::before {
+  content: ""; position: absolute; top: -12px; left: 50%; width: 5.5rem; height: 1.6rem;
+  background: var(--tape); transform: translateX(-50%) rotate(-3deg);
+}
+.stack .p1 { left: 0; top: 2rem; transform: rotate(-8deg); }
+.stack .p2 { right: 0; top: 1rem; transform: rotate(7deg); }
+.stack .p3 { left: 2%; top: 0.5rem; transform: rotate(-4deg); z-index: 2; }
+.stack .pola:hover { transform: rotate(0) scale(1.04); z-index: 3; }
+.pic.sun { background: radial-gradient(circle at 70% 30%, var(--butter) 0 18%, transparent 19%), linear-gradient(180deg, var(--tomato), var(--pink)); }
+.pic.sea { background: radial-gradient(ellipse at 50% 120%, var(--mint) 0 40%, transparent 41%), linear-gradient(160deg, var(--cobalt), #9fb0ff); }
+.pic.book { background: repeating-linear-gradient(90deg, var(--butter) 0 14px, var(--tomato) 14px 28px, var(--pink) 28px 42px, var(--cobalt) 42px 56px); }
+.sticker {
+  position: absolute; right: 0; bottom: -0.5rem; z-index: 4; width: 8.5rem; height: 8.5rem;
+  border-radius: 50%; background: var(--tomato); color: #fff; display: grid; place-items: center;
+  box-shadow: var(--shadow);
+}
+.sticker svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sticker b { font: 400 1.7rem/1 var(--display); }
+@media (max-width: 480px) { .stack { min-height: 22rem; } .sticker { width: 7rem; height: 7rem; } }
+
+/* Section headers */
+section.block { padding-block: 3.5rem; }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1rem; margin-bottom: 2.4rem; }
+.head h2 { font-size: clamp(2.4rem, 6vw, 3.8rem); }
+.head .hand { font-size: 1.6rem; color: var(--tomato); transform: rotate(-3deg); }
+
+/* Work polaroids */
+.board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.6rem 2rem; }
+@media (max-width: 900px) { .board { grid-template-columns: minmax(0, 1fr); max-width: 30rem; margin: 0 auto; } }
+.work {
+  background: var(--card); padding: 0.9rem 0.9rem 1.4rem; box-shadow: var(--shadow); position: relative;
+  display: grid; gap: 0.8rem; align-content: start; min-width: 0;
+  transition: transform .35s cubic-bezier(.3,1.4,.5,1);
+}
+.work:nth-child(1) { transform: rotate(-2.5deg); }
+.work:nth-child(2) { transform: rotate(1.8deg); margin-top: 1.5rem; }
+.work:nth-child(3) { transform: rotate(-1deg); }
+.work:hover { transform: rotate(0) translateY(-6px); }
+.work::before { content: ""; position: absolute; top: -12px; left: 1.2rem; width: 5rem; height: 1.5rem; background: var(--tape); transform: rotate(-6deg); }
+.work .pic { aspect-ratio: 4 / 3; max-width: 100%; display: grid; place-items: center; padding: 1rem; text-align: center; }
+.work .pic span { font: 400 clamp(1.8rem, 3.5vw, 2.3rem)/1 var(--display); color: #fff; text-shadow: 3px 3px 0 rgba(29,26,43,.35); }
+.work .tag { font: 700 1.45rem/1 var(--hand); color: var(--cobalt); }
+.work p { margin: 0; }
+.work .go {
+  justify-self: start; font-weight: 800; text-decoration: none; padding: 0.55rem 1rem; border-radius: 999px;
+  background: var(--ink); color: var(--board); font-size: 0.9rem;
+}
+.work .go:hover { background: var(--tomato); color: #fff; }
+.work .go.quiet { background: transparent; color: var(--soft); padding-left: 0; font-weight: 600; }
+.badge {
+  position: absolute; top: -1rem; right: -0.8rem; z-index: 2; background: var(--butter); color: #1d1a2b;
+  font: 400 1rem/1 var(--display); padding: 0.6rem 0.8rem; border-radius: 50%; transform: rotate(12deg);
+  aspect-ratio: 1; display: grid; place-items: center; width: 4.6rem; text-align: center; box-shadow: var(--shadow);
+}
+
+/* Camera bag (capabilities) */
+.bag { display: flex; flex-wrap: wrap; gap: 1rem; }
+.skill {
+  flex: 1 1 15rem; min-width: 0; border: 2.5px solid var(--ink); border-radius: 1.4rem; padding: 1.1rem 1.2rem;
+  background: var(--card); display: grid; gap: 0.3rem; transition: transform .2s;
+}
+.skill:hover { transform: translateY(-4px) rotate(-1deg); }
+.skill strong { font-size: 1.2rem; font-weight: 800; }
+.skill p { margin: 0; color: var(--soft); }
+.skill .dot { width: 1.1rem; height: 1.1rem; border-radius: 50%; border: 2px solid var(--ink); }
+
+/* Note */
+.note-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; }
+@media (max-width: 820px) { .note-wrap { grid-template-columns: minmax(0, 1fr); } }
+.note {
+  background: var(--butter); color: #1d1a2b; padding: 2.2rem 1.8rem 1.8rem; transform: rotate(-1.5deg);
+  box-shadow: var(--shadow); position: relative; max-width: 34rem;
+}
+.note::before { content: ""; position: absolute; top: -12px; left: 50%; width: 6rem; height: 1.6rem; background: rgba(255,255,255,.6); transform: translateX(-50%) rotate(2deg); }
+.note p { margin: 0 0 0.9rem; font-size: 1.08rem; }
+.note .sig { font: 700 2rem/1 var(--hand); color: var(--tomato); margin: 0; }
+.big-quote { font: 400 clamp(2rem, 5vw, 3.2rem)/1.08 var(--display); color: var(--cobalt); margin: 0; }
+.big-quote em { font-style: normal; color: var(--tomato); }
+
+/* Contact */
+.contact { background: var(--cobalt); color: #fff; padding-block: 4rem; position: relative; overflow: hidden; }
+.contact h2 { font-size: clamp(3rem, 10vw, 6.5rem); }
+.contact .hand { font-size: 1.8rem; color: var(--butter); }
+.contact .row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.8rem; }
+.contact a {
+  text-decoration: none; font-weight: 800; padding: 0.9rem 1.3rem; border-radius: 999px;
+  background: #fff; color: #1d1a2b; border: 2.5px solid #1d1a2b; box-shadow: 4px 4px 0 #1d1a2b;
+  transition: transform .15s, box-shadow .15s;
+}
+.contact a:nth-child(2) { background: var(--pink); }
+.contact a:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #1d1a2b; }
+.contact .flash { position: absolute; right: -2rem; top: -2rem; width: 14rem; height: 14rem; opacity: 0.9; }
+footer { padding-block: 1.4rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; color: var(--soft); font-size: 0.9rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .ticker-track { animation: slide 28s linear infinite; }
+  @keyframes slide { to { transform: translateX(-50%); } }
+  .sticker svg { animation: spin 14s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .stack .pola { animation: drop .7s cubic-bezier(.3,1.4,.5,1) both; }
+  .stack .p2 { animation-delay: .12s; } .stack .p3 { animation-delay: .24s; }
+  @keyframes drop { from { translate: 0 -24px; } to { translate: 0 0; } }
+}
+</style>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Economist</span><span>Oxford MBA</span><span>Photographer</span><span>Campaign maker</span><span>Coffee table book co-author</span><span>Co-founder of Leavr</span><span>Storyteller</span>
+    <span>Economist</span><span>Oxford MBA</span><span>Photographer</span><span>Campaign maker</span><span>Coffee table book co-author</span><span>Co-founder of Leavr</span><span>Storyteller</span>
+  </div>
+</div>
+
+<section class="hero gutter" aria-labelledby="name">
+  <div class="inner">
+    <div>
+      <span class="hello hand">hello, I am</span>
+      <h1 id="name">Nadia <span class="squig">Hassan<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12 Q 20 2 40 12 T 80 12 T 120 12 T 160 12 T 198 12" fill="none" stroke="var(--tomato)" stroke-width="5" stroke-linecap="round"/></svg></span></h1>
+      <p class="intro">Economist, Oxford MBA, Programme Manager and Creative Storyteller.</p>
+      <ul class="chips">
+        <li>Economist</li>
+        <li>Oxford MBA</li>
+        <li>Creative Storyteller</li>
+        <li>Campaigns &amp; comms</li>
+      </ul>
+    </div>
+    <div class="stack" aria-hidden="true">
+      <figure class="pola p2"><img class="pic" src="img/photobook.jpg" alt=""><figcaption>my coffee table book!</figcaption></figure>
+      <figure class="pola p3"><img class="pic" src="img/portrait.jpg" alt=""><figcaption>that is me :)</figcaption></figure>
+      <div class="sticker">
+        <svg viewBox="0 0 100 100"><defs><path id="ring" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="10.5" letter-spacing="2.4" fill="#fff"><textPath href="#ring">SAY CHEESE ✺ SAY CHEESE ✺ </textPath></text></svg>
+        <b>Hi!</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block gutter" aria-labelledby="about-h">
+  <div class="inner about">
+    <figure class="pola grad-pola">
+      <img class="pic" src="img/oxford.jpg" alt="Nadia in graduation dress, waving her mortarboard in an Oxford quad">
+      <figcaption>Oxford MBA: done!</figcaption>
+      <span class="badge">Class of 2026</span>
+    </figure>
+    <div class="about-text">
+      <div class="head"><h2 id="about-h">About me</h2><span class="hand">(the short version)</span></div>
+      <p>I am an <strong>economist</strong> with a First Class degree from Covenant University, Nigeria, with an <strong>MBA from Saïd Business School, University of Oxford</strong>, supported by a <strong>Mastercard Foundation Scholarship</strong> (with AFoX + St Cross College).</p>
+      <p>I have spent my career where numbers meet people: transaction advisory, running entrepreneurship programmes for Partners Worldwide, and co-founding Leavr, a circular marketplace for students. Through all of it I have been the one holding the camera and telling the story, in newsletters, impact reports, campaigns, exhibitions and a coffee table book.</p>
+      <p>So I bring both halves: the analyst who tracks the funnel and the creative who makes people want to be in it.</p>
+      <p>I am also a <strong>Certified Programme Manager</strong> with a <strong>Lean Six Sigma Green Belt</strong>, and my PMP is in view, so the big ideas land on time and on budget.</p>
+    </div>
+  </div>
+  <div class="inner">
+    <ul class="nums" aria-label="Highlights">
+      <li><b>3,000+</b><span>entrepreneurs supported through projects I managed across various continents</span></li>
+      <li><b>+40%</b><span>regional funding after the funders' summit I ran (11 countries)</span></li>
+      <li><b>500+</b><span>students signed up to Leavr through my launch campaigns</span></li>
+      <li><b>1,000+</b><span>attendees at the Oxford Africa Conference I set the visual direction for</span></li>
+      <li><b>+50%</b><span>social media engagement across 26 church branches in 5 countries</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="block gutter" aria-labelledby="path-h">
+  <div class="inner">
+    <div class="head"><h2 id="path-h">My path so far</h2></div>
+    <ol class="path">
+      <li><b>2013 – 2017</b><strong>B.Sc. Economics, First Class</strong><span>Covenant University · top 10% of 1,500</span></li>
+      <li><b>2025 – 2026</b><strong>Oxford MBA</strong><span>Saïd Business School · Impact &amp; Finance Lab</span><span class="honours"><em>Dean's Commendation Award</em><em>Mastercard Foundation Scholar</em></span></li>
+      <li><b>2020 – 2022</b><strong>Strategy &amp; Transaction Advisory</strong><span>Blackwater Global Consults · $3M in deals</span></li>
+      <li><b>2022 – 2025</b><strong>Partners Worldwide</strong><span>Country Project Manager, then Regional Project &amp; Training Manager</span></li>
+      <li><b>2026 – now</b><strong>Co-founder, Leavr</strong><span>Circular marketplace for university students</span></li>
+      <li><b>2026 – now</b><strong>Programme Consultant, Strategy</strong><span>ETK Group · market expansion across Africa</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block gutter" aria-labelledby="work-h">
+  <div class="inner">
+    <div class="head"><h2 id="work-h">The good bits</h2></div>
+    <div class="board">
+      <article class="work">
+        <span class="badge">Co-author!</span>
+        <img class="pic" src="img/photobook.jpg" alt="The Humans of the Lab coffee table book, by Blessing Abeng and Nadia Hassan, in its gift box">
+        <span class="tag">Humans of the Lab · print · campaign</span>
+        <p>I co-authored <strong>Humans of the Lab</strong> with Blessing Abeng: a coffee table book of portraits made for a campaign. We picked the shots, put them in order and shaped the story, so the campaign became something people could hold, keep and pass on.</p>
+        <a class="go" href="https://www.linkedin.com/feed/update/urn:li:activity:7500789001545498624/" target="_blank" rel="noopener">See the launch ↗</a>
+      </article>
+      <article class="work">
+        <span class="badge">A first!</span>
+        <a href="https://humansatthelab2.mypixieset.com/" target="_blank" rel="noopener"><img class="pic" src="img/humans-lab.jpg" alt="A grid of Humans at the Lab portraits of social entrepreneurs around Oxford"></a>
+        <span class="tag">Impact Lab Exhibitions · Oxford</span>
+        <p>I put on the first photography exhibitions at the Impact Lab for the Skoll Centre at Saïd Business School, telling the stories of social entrepreneurs through portraits.</p>
+        <a class="go" href="https://humansatthelab2.mypixieset.com/" target="_blank" rel="noopener">Visit Humans at the Lab ↗</a>
+      </article>
+      <article class="work">
+        <a class="video" href="https://drive.google.com/file/d/1JQEBF7C--0M_Tjkbh6IYU7fd3G1rOMtG/view?usp=sharing" target="_blank" rel="noopener" aria-label="Watch the Water Wins campaign film on Google Drive">
+          <img class="pic" src="img/water-wins.jpg" alt="Women and a girl pumping clean water at a village borehole, from the Water Wins film">
+          <span class="play" aria-hidden="true"></span>
+          <span class="vlabel">▶ Water Wins · campaign film</span>
+        </a>
+        <span class="tag">Partners Worldwide · campaigns · 3 continents</span>
+        <p>I owned every stakeholder message at Partners Worldwide: newsletters, storytelling and impact reports for funders in Asia, North America and Africa. I also ran a summit for 73 senior stakeholders from 11 countries that helped lift regional funding by 40%.</p>
+        <a class="go" href="https://drive.google.com/file/d/1JQEBF7C--0M_Tjkbh6IYU7fd3G1rOMtG/view?usp=sharing" target="_blank" rel="noopener">Watch Water Wins ↗</a>
+      </article>
+      <article class="work">
+        <img class="pic" src="img/oxford-africa.jpg" alt="The Narrating Africa panel on stage at the Oxford Africa Conference 2026, with Nadia Hassan named as moderator on the screens">
+        <span class="tag">Oxford Africa Conference 2026 · creative direction · moderator</span>
+        <p>I built the creative moodboard and visual design direction for the Oxford Africa Conference, shaping the look of a flagship event for 1,000 attendees.</p>
+        <p>I also moderated the Arts, Media &amp; Culture panel, <strong>Narrating Africa: Arts, Global Influence and the Creative Economy</strong>, with Peace Hyde, Michelle Adepoju, Anthony Azekwoh and Dr King SMADE.</p>
+      </article>
+      <article class="work">
+        <a href="https://www.leavr.co.uk" target="_blank" rel="noopener"><img class="pic full" src="img/leavr.jpg" alt="Leavr launch poster: Looking for where to buy or sell off items to students in Oxford? Sign up at leavr.co.uk"></a>
+        <span class="tag">Leavr · launch campaign · founder</span>
+        <p>I co-founded Leavr and wrote and tested the content, campaigns and messages that brought in 500+ students and £5,000+ in early sales, using funnel data to decide what to change next.</p>
+        <a class="go" href="https://www.leavr.co.uk" target="_blank" rel="noopener">Visit Leavr ↗</a>
+      </article>
+      <article class="work">
+        <img class="pic" src="img/celebration.jpg" alt="Three Celebration Church team members in branded vests, smiling with arms crossed">
+        <span class="tag">26 Branches, One Voice · social content · 5 countries</span>
+        <p>As Global Team Lead for Administration &amp; Communications at Celebration Church International, I brought 26 branches in 5 countries onto one content rhythm, growing social engagement by 50%.</p>
+        <span class="go quiet">Examples on request</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block gutter" aria-labelledby="bag-h">
+  <div class="inner">
+    <div class="head"><h2 id="bag-h">What I bring to the team</h2></div>
+    <div class="bag">
+      <div class="skill"><span class="dot" style="background: var(--tomato)"></span><strong>Strong programme management</strong><p>Managing projects for 3,000+ entrepreneurs across various continents, and a $500K portfolio across 3 African regions, hitting 90%+ of key targets, with Lean Six Sigma behind the process.</p></div>
+      <div class="skill"><span class="dot" style="background: var(--cobalt)"></span><strong>Creative storytelling to drive change</strong><p>Photographs, coffee table books, exhibitions and impact stories that move funders, partners and communities to act.</p></div>
+      <div class="skill"><span class="dot" style="background: var(--butter)"></span><strong>Analytical mindset</strong><p>An economist's eye: funnel metrics, KPIs, financial modelling and Tableau reporting, so every decision rests on the numbers.</p></div>
+      <div class="skill"><span class="dot" style="background: var(--pink)"></span><strong>Content for digital</strong><p>Assets sized and paced for social, web, newsletters and internal channels, tested and improved with real data.</p></div>
+      <div class="skill"><span class="dot" style="background: var(--mint)"></span><strong>Stakeholder management</strong><p>Tailoring every message for funders, partners and senior leaders across Asia, North America and Africa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block gutter" aria-labelledby="badge-h">
+  <div class="inner">
+    <div class="head"><h2 id="badge-h">Badges I have earned</h2></div>
+    <ul class="badges">
+      <li><div class="merit"><b>Certified Programme Manager</b><small>Programmes across 3 African regions</small></div></li>
+      <li><div class="merit"><b>Lean Six Sigma</b><small>Green Belt · Process improvement</small><i>2026</i></div></li>
+      <li><div class="merit"><span class="soon">In view</span><b>PMP</b><small>Project Management Professional</small><i>coming soon!</i></div></li>
+      <li><div class="merit"><b>Applied Generative AI</b><small>Oxford Saïd · AI &amp; Large Language Models</small><i>2026</i></div></li>
+      <li><div class="merit"><b>GPTs &amp; AI Agents</b><small>Fine-tuned GPTs for insights &amp; automation</small><i>2026</i></div></li>
+      <li><div class="merit"><b>LBO Modelling</b><small>Leveraged buyout modelling</small><i>2025</i></div></li>
+      <li><div class="merit"><b>McKinsey Forward</b><small>Alumnus</small></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="block gutter" aria-labelledby="why-h">
+  <div class="inner note-wrap">
+    <div class="lens">
+      <h2 id="why-h" class="big-quote">A head for <em>numbers</em>, an eye for <em>stories</em>.</h2>
+      <figure class="pola lens-pola"><img class="pic" src="img/camera.jpg" alt="Nadia photographing a smiling woman beside a pile of palm fruit on location"><figcaption>behind the lens, on location</figcaption></figure>
+    </div>
+    <div class="note">
+      <p>Dear Hiring Manager,</p>
+      <p>The best work happens where creativity, data and people meet. That is where I work: I am an economist and Oxford MBA who shoots the content, plans how it reaches people, and measures what it changed. I have taken campaigns into newsletters, exhibitions and all the way into print, and managed programmes for 3,000+ entrepreneurs.</p>
+      <p>I would love to bring that range to your team.</p>
+      <p class="sig">Nadia x</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact gutter" aria-labelledby="contact-h">
+  <svg class="flash" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0 L58 38 L100 50 L58 62 L50 100 L42 62 L0 50 L42 38 Z" fill="var(--butter)"/></svg>
+  <div class="inner">
+    <span class="hand">so, shall we?</span>
+    <h2 id="contact-h">Let us make<br>something.</h2>
+    <div class="row">
+      <a href="https://www.linkedin.com/in/nadiahhassan" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://nadiahassan.mypixieset.com/" target="_blank" rel="noopener">See my photography ↗</a>
+      <a href="https://www.leavr.co.uk" target="_blank" rel="noopener">Leavr ↗</a>
+    </div>
+    <p class="email">Email me: <span>nadia.hassan.mba25@said.oxford.edu</span></p>
+  </div>
+</section>
+
+<footer class="gutter">
+  <div class="inner" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:.5rem; width:100%">
+    <span>© 2026 Nadia Hassan</span>
+    <span>All photographs by Nadia</span>
+  </div>
+</footer>
+
+</body></html>
